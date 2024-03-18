@@ -1,0 +1,210 @@
+@use "variables" as *;
+@use "typography";
+@use "breakpoints" as *;
+@use "functions" as *;
+
+body {
+  background-color: $light-grayish-blue;
+  font-family: $font-stack;
+  font-size: $font-size-paragraph;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 rem(24);
+}
+
+.card {
+  margin-top: auto;
+  max-width: rem(327);
+  background-color: whitesmoke;
+  border-radius: rem(10);
+
+  @include breakpoint(medium) {
+    max-width: rem(730);
+    display: flex;
+  }
+  &__image {
+    &--main {
+      width: 327px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: rem(10) rem(10) 0 0;
+
+      @include breakpoint(medium) {
+        width: 285px;
+        height: 280px;
+        object-fit: revert;
+        border-radius: rem(10) 0 0 rem(10);
+      }
+    }
+  }
+
+  &__text--half {
+    padding: 0 rem(32);
+    margin-top: rem(36);
+    @include breakpoint(medium) {
+      max-width: rem(445);
+      padding: rem(32) rem(40);
+      margin-top: revert;
+    }
+  }
+
+  &__text {
+    &--header {
+      font-size: rem(16);
+      line-height: 1.5;
+      letter-spacing: 0.2px;
+      color: $very-dark-grayish-blue;
+
+      @include breakpoint(medium) {
+        font-size: rem(20);
+        line-height: 1.4;
+        letter-spacing: 0.25px;
+      }
+    }
+
+    &--description {
+      margin-top: rem(12);
+      font-weight: 500;
+      line-height: 1.54;
+      letter-spacing: 0.12px;
+      color: $desaturated-dark-blue;
+    }
+  }
+
+  &__profile {
+    margin-top: rem(32);
+    margin-bottom: rem(20);
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+    position: relative;
+
+    @include breakpoint(medium) {
+      margin-top: rem(20);
+      margin-bottom: revert;
+    }
+    &--picture {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    &--name {
+      font-weight: 700;
+      line-height: 1.54;
+      letter-spacing: 0.12px;
+      color: $very-dark-grayish-blue;
+    }
+
+    &--date {
+      font-weight: 500;
+      line-height: 1.54;
+      letter-spacing: 0.12px;
+      color: $grayish-blue;
+    }
+
+    &--btn-share {
+      margin-left: auto;
+      border: none;
+      display: flex;
+      padding: rem(9);
+      border-radius: 50%;
+      background-color: $light-grayish-blue;
+      cursor: pointer;
+    }
+  }
+
+  /* Card Share for Mobile */
+  &__share {
+    margin-top: rem(20);
+    background-color: $very-dark-grayish-blue;
+    margin-left: rem(-32);
+    margin-right: rem(-32);
+    display: flex;
+    align-items: center;
+    gap: rem(21);
+    padding: rem(16) rem(32);
+    border-radius: 0 0 rem(10) rem(10);
+
+    &--text {
+      font-weight: 500;
+      line-height: 1.54;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: $grayish-blue;
+    }
+
+    &--social--icon {
+      display: flex;
+      align-items: center;
+      gap: rem(16);
+    }
+
+    &--btn-share {
+      margin-left: auto;
+      border: none;
+      display: flex;
+      padding: rem(9);
+      border-radius: 50%;
+      background-color: $desaturated-dark-blue;
+      cursor: pointer;
+
+      svg path {
+        fill: #ffffff;
+      }
+    }
+  }
+}
+
+/* Card Share for desktop */
+.card__share--desktop {
+  position: absolute;
+  // top: 135px;
+  // left: 263px;
+  bottom: 63px;
+  left: 224px;
+  z-index: 2;
+}
+
+.card__share--container {
+  position: relative;
+  min-width: 248px;
+}
+
+.share--icons {
+  display: flex;
+  gap: 21px;
+  background-color: $very-dark-grayish-blue;
+  padding: 18px 36px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid hsl(217, 19%, 35%);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Footer */
+.attribution {
+  margin-top: auto;
+  font-size: rem(11);
+  text-align: center;
+}
+.attribution a {
+  color: hsl(120, 93%, 17%);
+  font-weight: 700;
+}

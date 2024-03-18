@@ -1,0 +1,300 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+hr {
+  margin: 0;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  font-family: "Manrope", sans-serif;
+  font-size: 0.8125rem;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+.card {
+  margin-top: auto;
+  max-width: 20.4375rem;
+  background-color: whitesmoke;
+  border-radius: 0.625rem;
+  /* Card Share for Mobile */
+}
+@media (min-width: 48.75rem) {
+  .card {
+    max-width: 45.625rem;
+    display: flex;
+  }
+}
+.card__image--main {
+  width: 327px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.625rem 0.625rem 0 0;
+}
+@media (min-width: 48.75rem) {
+  .card__image--main {
+    width: 285px;
+    height: 280px;
+    object-fit: revert;
+    border-radius: 0.625rem 0 0 0.625rem;
+  }
+}
+.card__text--half {
+  padding: 0 2rem;
+  margin-top: 2.25rem;
+}
+@media (min-width: 48.75rem) {
+  .card__text--half {
+    max-width: 27.8125rem;
+    padding: 2rem 2.5rem;
+    margin-top: revert;
+  }
+}
+.card__text--header {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  color: hsl(217, 19%, 35%);
+}
+@media (min-width: 48.75rem) {
+  .card__text--header {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    letter-spacing: 0.25px;
+  }
+}
+.card__text--description {
+  margin-top: 0.75rem;
+  font-weight: 500;
+  line-height: 1.54;
+  letter-spacing: 0.12px;
+  color: hsl(214, 17%, 51%);
+}
+.card__profile {
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+@media (min-width: 48.75rem) {
+  .card__profile {
+    margin-top: 1.25rem;
+    margin-bottom: revert;
+  }
+}
+.card__profile--picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.card__profile--name {
+  font-weight: 700;
+  line-height: 1.54;
+  letter-spacing: 0.12px;
+  color: hsl(217, 19%, 35%);
+}
+.card__profile--date {
+  font-weight: 500;
+  line-height: 1.54;
+  letter-spacing: 0.12px;
+  color: hsl(212, 23%, 69%);
+}
+.card__profile--btn-share {
+  margin-left: auto;
+  border: none;
+  display: flex;
+  padding: 0.5625rem;
+  border-radius: 50%;
+  background-color: hsl(210, 46%, 95%);
+  cursor: pointer;
+}
+.card__share {
+  margin-top: 1.25rem;
+  background-color: hsl(217, 19%, 35%);
+  margin-left: -2rem;
+  margin-right: -2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.3125rem;
+  padding: 1rem 2rem;
+  border-radius: 0 0 0.625rem 0.625rem;
+}
+.card__share--text {
+  font-weight: 500;
+  line-height: 1.54;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: hsl(212, 23%, 69%);
+}
+.card__share--social--icon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.card__share--btn-share {
+  margin-left: auto;
+  border: none;
+  display: flex;
+  padding: 0.5625rem;
+  border-radius: 50%;
+  background-color: hsl(214, 17%, 51%);
+  cursor: pointer;
+}
+.card__share--btn-share svg path {
+  fill: #ffffff;
+}
+
+/* Card Share for desktop */
+.card__share--desktop {
+  position: absolute;
+  bottom: 63px;
+  left: 224px;
+  z-index: 2;
+}
+
+.card__share--container {
+  position: relative;
+  min-width: 248px;
+}
+
+.share--icons {
+  display: flex;
+  gap: 21px;
+  background-color: hsl(217, 19%, 35%);
+  padding: 18px 36px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid hsl(217, 19%, 35%);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Footer */
+.attribution {
+  margin-top: auto;
+  font-size: 0.6875rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(120, 93%, 17%);
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=style.css.map */
