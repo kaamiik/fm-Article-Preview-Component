@@ -120,18 +120,19 @@ body {
     }
   }
 
-  /* Card Share for Mobile */
   &__share {
-    margin-top: rem(20);
-    background-color: $very-dark-grayish-blue;
-    margin-left: rem(-32);
-    margin-right: rem(-32);
-    display: flex;
-    align-items: center;
-    gap: rem(21);
-    padding: rem(16) rem(32);
-    border-radius: 0 0 rem(10) rem(10);
-
+    /* Card Share for Mobile */
+    &--mobile {
+      margin-top: rem(20);
+      background-color: $very-dark-grayish-blue;
+      margin-left: rem(-32);
+      margin-right: rem(-32);
+      display: flex;
+      align-items: center;
+      gap: rem(21);
+      padding: rem(16) rem(32);
+      border-radius: 0 0 rem(10) rem(10);
+    }
     &--text {
       font-weight: 500;
       line-height: 1.54;
@@ -140,7 +141,7 @@ body {
       color: $grayish-blue;
     }
 
-    &--social--icon {
+    &--socialIcon {
       display: flex;
       align-items: center;
       gap: rem(16);
@@ -159,43 +160,39 @@ body {
         fill: #ffffff;
       }
     }
+
+    /* Card Share for desktop */
+    &--desktop {
+      position: absolute;
+      bottom: rem(63);
+      left: rem(224);
+    }
+
+    &--container {
+      position: relative;
+      min-width: rem(248);
+    }
+
+    &--main {
+      display: flex;
+      background-color: $very-dark-grayish-blue;
+      padding: rem(18) rem(36);
+      border-radius: rem(10);
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &--arrow {
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-top: 12px solid $very-dark-grayish-blue;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
-}
-
-/* Card Share for desktop */
-.card__share--desktop {
-  position: absolute;
-  // top: 135px;
-  // left: 263px;
-  bottom: 63px;
-  left: 224px;
-  z-index: 2;
-}
-
-.card__share--container {
-  position: relative;
-  min-width: 248px;
-}
-
-.share--icons {
-  display: flex;
-  gap: 21px;
-  background-color: $very-dark-grayish-blue;
-  padding: 18px 36px;
-  border-radius: 10px;
-  justify-content: center;
-  align-items: center;
-}
-
-.arrow-down {
-  width: 0;
-  height: 0;
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-top: 12px solid hsl(217, 19%, 35%);
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 /* Footer */

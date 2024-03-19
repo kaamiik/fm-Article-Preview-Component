@@ -122,7 +122,6 @@ body {
   max-width: 20.4375rem;
   background-color: whitesmoke;
   border-radius: 0.625rem;
-  /* Card Share for Mobile */
 }
 @media (min-width: 48.75rem) {
   .card {
@@ -216,6 +215,10 @@ body {
   cursor: pointer;
 }
 .card__share {
+  /* Card Share for Mobile */
+  /* Card Share for desktop */
+}
+.card__share--mobile {
   margin-top: 1.25rem;
   background-color: hsl(217, 19%, 35%);
   margin-left: -2rem;
@@ -233,7 +236,7 @@ body {
   text-transform: uppercase;
   color: hsl(212, 23%, 69%);
 }
-.card__share--social--icon {
+.card__share--socialIcon {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -250,31 +253,24 @@ body {
 .card__share--btn-share svg path {
   fill: #ffffff;
 }
-
-/* Card Share for desktop */
 .card__share--desktop {
   position: absolute;
-  bottom: 63px;
-  left: 224px;
-  z-index: 2;
+  bottom: 3.9375rem;
+  left: 14rem;
 }
-
 .card__share--container {
   position: relative;
-  min-width: 248px;
+  min-width: 15.5rem;
 }
-
-.share--icons {
+.card__share--main {
   display: flex;
-  gap: 21px;
   background-color: hsl(217, 19%, 35%);
-  padding: 18px 36px;
-  border-radius: 10px;
-  justify-content: center;
+  padding: 1.125rem 2.25rem;
+  border-radius: 0.625rem;
+  justify-content: space-between;
   align-items: center;
 }
-
-.arrow-down {
+.card__share--arrow {
   width: 0;
   height: 0;
   border-left: 12px solid transparent;
