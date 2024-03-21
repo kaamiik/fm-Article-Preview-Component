@@ -25,32 +25,32 @@
     <div class="wrapper">
       <main class="card">
         <div class="card__image--half">
-          <section class="card__image">
+          <div class="card__image">
             <img
               class="card__image--main"
               src="images/drawers.jpg"
               alt="Green wooden dresser with a vase of dried wheat and two framed artworks against a white brick wall"
             />
-          </section>
+          </div>
         </div>
         <div class="card__text--half">
-          <section class="card__text">
-            <h1 class="card__text--header">
+          <div class="card__text">
+            <h3 class="card__text--header">
               Shift the overall look and feel by adding these wonderful touches
               to furniture in your home
-            </h1>
+            </h3>
             <p class="card__text--description">
               Ever been in a room and felt like something was missing? Perhaps
               it felt slightly bare and uninviting. I’ve got some simple tips to
               help you make any room feel complete.
             </p>
-          </section>
+          </div>
           <!-- On default, User will see this part. profile picture, profile info and share icon button are here. -->
-          <section class="card__profile">
+          <div class="card__profile">
             <img
               class="card__profile--picture"
               src="images/avatar-michelle.jpg"
-              alt="Profile Picture"
+              alt="Michelle Appleton with their face obscured, wearing a white shirt and a jacket, with a sea background."
             />
 
             <div class="card__profile--info">
@@ -59,7 +59,7 @@
             </div>
 
             <button class="btn card__profile--btn-share">
-              <span class="sr-only">Share Icon</span>
+              <span class="sr-only">Toggles to share options</span>
               <img
                 class="share__icon--img"
                 src="images/icon-share.svg"
@@ -73,65 +73,59 @@
                   <p class="card__share--text">Share</p>
                   <div class="card__share--socialIcon">
                     <a href="#">
-                      <span class="sr-only">facebook icon</span>
-                      <img
-                        src="images/icon-facebook.svg"
-                        alt=""
-                        class="facebook"
-                      />
+                      <span class="sr-only">Share this on facebook</span>
+                      <img src="images/icon-facebook.svg" alt="" />
                     </a>
                     <a href="#">
-                      <span class="sr-only">twitter icon</span>
-                      <img
-                        src="images/icon-twitter.svg"
-                        alt=""
-                        class="twitter"
-                      />
+                      <span class="sr-only">Share this on facebook</span>
+                      <img src="images/icon-twitter.svg" alt="" />
                     </a>
                     <a href="#">
-                      <span class="sr-only">pinterest icon</span>
-                      <img
-                        src="images/icon-pinterest.svg"
-                        alt=""
-                        class="pinterest"
-                      />
+                      <span class="sr-only">Share this on pinterest</span>
+                      <img src="images/icon-pinterest.svg" alt="" />
                     </a>
                   </div>
                 </div>
                 <div class="card__share--arrow"></div>
               </div>
             </div>
-          </section>
+          </div>
 
           <!-- When the user clicks on share icon on mobile view this part will appear. -->
-          <section class="card__share--mobile visually-hidden">
+          <div class="card__share--mobile visually-hidden">
             <p class="card__share--text">Share</p>
 
             <div class="card__share--socialIcon">
               <a href="#">
-                <span class="sr-only">facebook icon</span>
-                <img src="images/icon-facebook.svg" alt="" class="facebook" />
+                <span class="sr-only">Share this on facebook</span>
+                <img src="images/icon-facebook.svg" alt="" />
               </a>
               <a href="#">
-                <span class="sr-only">twitter icon</span>
-                <img src="images/icon-twitter.svg" alt="" class="twitter" />
+                <span class="sr-only">Share this on twitter</span>
+                <img src="images/icon-twitter.svg" alt="" />
               </a>
               <a href="#">
-                <span class="sr-only">pinterest icon</span>
-                <img src="images/icon-pinterest.svg" alt="" class="pinterest" />
+                <span class="sr-only">Share this on pinterest</span>
+                <img src="images/icon-pinterest.svg" alt="" />
               </a>
             </div>
 
             <button class="btn card__share--btn-share">
-              <span class="sr-only">Share Icon</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+              <span class="sr-only">Toggles to share options</span>
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="13"
+              >
                 <path
                   fill="#6E8098"
                   d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
                 />
               </svg>
             </button>
-          </section>
+          </div>
         </div>
       </main>
       <footer class="attribution">

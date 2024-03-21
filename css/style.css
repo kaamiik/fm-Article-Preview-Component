@@ -135,7 +135,7 @@ body {
   background-color: whitesmoke;
   border-radius: 0.625rem;
 }
-@media (min-width: 48.75rem) {
+@media (min-width: 54.375rem) {
   .card {
     max-width: 45.625rem;
     display: flex;
@@ -147,7 +147,7 @@ body {
   object-fit: cover;
   border-radius: 0.625rem 0.625rem 0 0;
 }
-@media (min-width: 48.75rem) {
+@media (min-width: 54.375rem) {
   .card__image--main {
     width: 285px;
     height: 280px;
@@ -159,7 +159,7 @@ body {
   padding: 0 2rem;
   margin-top: 2.25rem;
 }
-@media (min-width: 48.75rem) {
+@media (min-width: 54.375rem) {
   .card__text--half {
     max-width: 27.8125rem;
     padding: 2rem 2.5rem;
@@ -172,7 +172,7 @@ body {
   letter-spacing: 0.2px;
   color: hsl(217, 19%, 35%);
 }
-@media (min-width: 48.75rem) {
+@media (min-width: 54.375rem) {
   .card__text--header {
     font-size: 1.25rem;
     line-height: 1.4;
@@ -194,7 +194,7 @@ body {
   gap: 1rem;
   position: relative;
 }
-@media (min-width: 48.75rem) {
+@media (min-width: 54.375rem) {
   .card__profile {
     margin-top: 1.25rem;
     margin-bottom: revert;
